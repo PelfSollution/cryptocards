@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="img/favicon.ico">
+
+    <title>Crypto PostCards</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+	<link href="styles/app.css" rel="stylesheet">
+
+</head>
+
+
+    <body>
+        <div class="row">
+            <nav class="navbar fixed-top navbar-expand-md navbar-light" style="background-color: #fafafa;">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="img/logo-crypto.png" title="Crypto PostCards" alt="Crypto PostCards">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mr-auto">
+                    </ul>
+                    <span class="navbar-text">
+                        <ul class="navbar-nav mr-auto"> 
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index.html">Comprar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/subir.html">Subir</a>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn-outline-secondary" data-toggle="modal" data-target="#exampleModalLong">
+                                       FAQ
+                                      </button>
+                        </li>
+
+                        </ul>
+                    </span>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                <div class="col-xs-12" style="height:100px;"></div>
+         <div class="container">
+                <div style="display: none;" class="alert alert-danger" id="msg"></div> 
+          <h1>Subir PostCards</h1>
+          <p class="texto-pequeño">(Solo si eres onlyOwner del Contrato)</p>
+          <div class="container">
+      
+        
+            <form class="form-horizontal" id="add-card-to-web">
+             <div class="form-group">
+              <label for="card-name" class="col-sm-2 control-label">Nombre:</label>
+              <div class="col-xs-12">
+               <input type="text" name="card-name" class="form-control" id="card-name" placeholder="..." required="required"></input>
+              </div>
+             </div>
+            <!-- <div class="form-group">
+              <label for="product-price" class="col-sm-2 control-label">Precio</label>
+              <div class="col-xs-12">
+               <input type="text" class="form-control" name="product-price" id="product-price" placeholder="In Ether, Ex: 0.2"></input>
+              </div>
+             </div>-->
+             
+       
+             <div class="form-group">
+               <label for="card-image" class="col-sm-5 control-label">Subir foto a IPFS</label>
+               <div class="col-xs-12">
+                <input type="file" name="card-image" class="form-control" id="card-image" required="required">
+               </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="card-description" class="col-sm-2 control-label">Description</label>
+                <div class="col-xs-12">
+                 <textarea class="form-control" name="card-description" rows="8" id="card-description" placeholder="Texto extra a IPFS" required="required"></textarea>
+                </div>
+               </div>
+              
+            
+             <div class="form-group">
+              <div class="col-xs-12">
+               <button type="submit" class="btn btn-primary">Subir</button>
+              </div>
+             </div>
+            </form>
+           </div>
+          </div>
+         </div>
+        </div>
+   
+
+
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Preguntas Frequentes</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                        
+                              <p class="ttu mb3">
+                                ≥ ¿Que necessito para Crypto PostCards?
+                              </p>
+                        
+                              <p class="pb3 mt0">
+                                 <ul>
+                                   <li>Un navegador Chrome, Firefox, Opera o Brave (O navegador Mist) </li>
+                                   <li>Una extensión "MetaMask", que sirve como su billetera Ethereum (en caso de usar un navegador Mist, no necesita instalar MetaMask) </li>
+                                    <li>$ETH, la criptomoneda de de la red Ethrereum utilizada para comprar Crypto PostCards.</li>
+                              </ul>
+                                Por el momento recomendamos seguir con Chrome. Puede ser técnicamente posible utilizar otro navegador, pero no podemos garantizar un rendimiento óptimo, por lo que es posible que desee mantenerse al margen, gracias.
+                              </p>
+                        
+                              <p class="ttu mb3">
+                                ≥ ¿Cómo uso MetaMask?
+                              </p>
+                        
+                              <p class="mt0">
+                                    Para poder comprar Crypto PostCards, deberá instalar el complemento <a href='https://metamask.io/'>Metamask</a> y configurar una billetera Ethereum. 
+                                    Esto servirá como su billetera online, así que por favor cuide bien la contraseña y no comparta las palabras clave con nadie. Para obtener más instrucciones, consulte este <a href='https://www.youtube.com/watch?v=6Gf_kRE4MJU&feature=youtu.be'>video</a> .
+                              </p>
+
+                              <p class="ttu mb3">
+                                    ≥ ¿Dónde compro Ethereum?
+                                  </p>
+                            
+                                  <p class="mt0">
+                                        Para comprar Crypto PostCards, deberá usar $ETH, que puede comprar utilizando fiat de varios exchanges como <a href='https://www.coinbase.com/'>Coinbase</a>. Como segundo paso, deberá transferir el $ETH comprado en el exchange a su billetera MetaMask.
+                                  </p>
+
+
+                                  <p class="ttu mb3">
+                                        ≥ ¿Qué son las Crypto PostCards?
+                                      </p>
+                                
+                                      <p class="mt0">
+                                    
+                                            Las Crypto PostCards son "CryptoArt-CryptoColleccionables-TokensERC721", es decir Obras digitales (Memes, Arte Digital, Collages...) que mediante smart contracts son tokenizados sobre la blockchain de Ethereum. 
+                                            Cada Crypto PostCard representa una creacion digital que puedes comprar y registrar en nuestra plataforma. Al comprar la Crypto PostCard, adquirirá la propiedad de la obra, parte del precio de compra pagado se transferirá al propietario anterior y el resto 30% a una causa social mediante el "Charity Cut". 
+                                    </p>
+
+                                    <p class="ttu mb3">
+                                            ≥ ¿Cómo varía el precio de cada Crypto PostCard?
+                                          </p>
+                                    
+                                          <p class="mt0">
+                                        
+                                                Todos los Crypto PostCards, exceptuando alguna edición especial, saldrán a un precio inicial, muy bajo de salida. El precio se mantendrá o subirá dependiendo de su popularidad. 
+                                                Una vez comprado, mediante un smart contract actualizara al siguiente salto de precio de forma automática, el propietario no tiene forma de mantenerse el token siempre que haya otra persona interesado en él, creemos que con esta variable de "tokenomics" o de incitación al juego y a mantener el token en tu propiedad genera más transacciones por lo tanto también más ganancias para la causa social.
+                                        </p>
+
+                              <p class="ttu mb3">
+                                ≥ Charity Cut 30%
+                              </p>
+                        
+                              <p class="mt0">
+                                Al comprar una Crypto PostCard, hay un recorte benéfico del 30% que sera directamente donado a una Organizació Benéfica. El Smart Contract está diseñado para que el "Charity Cut" sea tomados y enviados a las organizaciones beneficiarias una vez que la próxima persona compre tu CryptoCard</a>
+                              </p>
+                            </div>
+                </div>
+    
+              </div>
+            </div>
+          </div>
+    <!-- ========= Bootsrap 4 - JavaScript ========= -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+	crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+    crossorigin="anonymous"></script>
+
+    <!-- ========= Local JavaScript ========= -->
+    <!--<script type="text/javascript" src="scripts/lib/index.min.js"></script>
+	<script type="text/javascript" src="scripts/lib/bignumber.min.js"></script>
+	<script type="text/javascript" src="scripts/lib/web3.min.js"></script>
+    <script type="text/javascript" src="scripts/lib/truffle-contract.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>-->
+
+
+<script type="text/javascript" src="form.bundle.js"></script></body>
+
+</html>

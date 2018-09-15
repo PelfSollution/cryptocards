@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="shortcut icon" href="/favicon.ico">
+
+    <title>Crypto PostCards</title>
+ 
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+	<link type="text/css" rel="stylesheet" href="styles/app.css">
+
+
+
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-md navbar-light" style="background-color: #fafafa;">
+        <a class="navbar-brand" href="/index.html">
+           <img src="img/logo-crypto.png" title="Crypto PostCards" alt="Crypto PostCards">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <span class="navbar-text">
+                <ul class="navbar-nav mr-auto"> 
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/index.html">Comprar</a>
+                    </li>
+                    <li class="nav-item oculto" style="display:none;">
+                        <a class="nav-link" href="subir.html">Subir</a>
+                    </li>
+                    <li class="nav-item">
+                            <button type="button" class="btn-outline-secondary" data-toggle="modal" data-target="#exampleModalLong">
+                                   FAQ
+                                  </button>
+                    </li>
+                </ul>
+            </span>
+        </div>
+    </nav>
+    <div class="container-fluid">
+    <div class="col-xs-12" style="height:60px;"></div>
+    <div class="col-xs-12">
+            <div  class="charity" id="charity-amount"><p><img src="img/ico-charity.png">CHARITY CUT: <a class="charity-amount" style="color: #ffd46e;"> </a> <span style="color: #ffd46e;">Ξ</span></p></div>
+        <div style="display: none;" class="alert alert-info text-center" id="msg"></div>
+    </div>
+
+
+  
+
+
+            
+
+    <!-- /card-row -->
+</div>
+
+    <div class="card-container">
+            <div class="row mt centered">
+            </div>
+            <!-- /row -->
+            <div id="card-row" class="row card-columns card-deck">
+            <!-- Artworks Load Here -->
+        </div>
+        <div class="col-xs-12" style="height:30px;"></div>
+        <!-- /card-row -->
+    </div>
+
+    <div class="card-container" id="card-container-own">
+        <div class="row mt centered">
+        </div>
+        <!-- /row -->
+        <div class="oculto" style="display:none;">
+        <hr class="style-three">
+        <div class="col-xs-12" style="height:30px;"></div>
+        <h1>Tus Postales</h1>
+        </div>
+        <div id="card-row2" class="row card-columns card-deck">
+        <!-- Artworks Load Here -->
+    </div>
+    <!-- /card-row -->
+    
+</div>
+    
+	<!-- /card-container -->
+    <div id="card-template" class="shadow-sm" style="display: none;">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+            <div class="card shadow">
+                <!-- Art Image -->
+                <hr>
+                <a class="image">
+                    <img class="card-img-top art-img" style="width:100%;"></img>
+                </a>
+                <div class="card-block">
+                    <!-- Art Name + Id Art-->
+                    <div class="art-text">
+                            <a class="art-name" style="color: #303030;"></a><span class="etiqueta-id">Card: <span class="texto-d-p id-owner"></span></span><span class="etiqueta-rare">MegaRare</span> </p>
+                      
+                        </div>
+                    <!-- Id Art -->  
+                    <!-- Art Owner -->
+                    <div class="art-text">
+                        <p class="texto-d-n">Propietario:</p>
+                       <!-- <small><a class="text-muted art-owner" style="color: #ee0a0a;" target="_blank"></a></small>-->
+                       <p class="texto-d-p">⛓️ <a class="art-owner text-link" target="_blank"></a></p>
+                    </div>
+                    <div id="product-image"></div>
+                 
+                  
+                    <hr>
+                    <!-- Art Purchase -->
+
+        
+                    
+                    <form class="art-purchase" id="form.art-purchase">
+                        <div class="input">
+                            <button class="btn btn-primary btn-buy" type="submit" data-id="0" id="artBuyButton" onclick="uclicked(this)"><span>Compra a</span>
+                            <text class="art-price" type="number" id="artPrice"></text></button>
+                        </div>
+
+                        <div class="art-text">
+                            <small>Nuevo Precio: </small>
+                            <small><a class="art-next-price" style="color: #ee0a0a;"> </a> <span style="color: #ee0a0a;">Ξ</span></small>
+                            <small style="color: #ee0a0a;"></small>
+                        </div>
+                    </form>
+                    <hr>
+                </div>
+                <!-- /card-block -->
+                <!-- /card-footer -->
+            </div>
+            <!-- /card -->
+        </div>
+        <!-- /col-xl-3 /col-lg-3 /col-md-4 /col-sm-6 -->
+	</div>
+	<!-- /card-template -->
+    <div class="col-xs-12" style="height:180px;"></div>
+  
+        <div class="text-muted" style="margin-top:40px;"><p class="footer-bottom-text">Made with <I class="" data-fa-i2svg=""><svg class="fa-ethereum" aria-hidden="true" data-prefix="fab" data-icon="ethereum" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"></path></svg></I> &amp; IPFS</p></div>
+    </div>
+        
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">¿Que necessito para Crypto PostCards?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    
+                    <p class="ttu mb3">
+                            ≥ ¿Que necessito para Crypto PostCards?
+                          </p>
+                    
+                          <p class="pb3 mt0">
+                             <ul>
+                               <li>Un navegador Chrome, Firefox, Opera o Brave (O navegador Mist) </li>
+                               <li>Una extensión "MetaMask", que sirve como su billetera Ethereum (en caso de usar un navegador Mist, no necesita instalar MetaMask) </li>
+                                <li>$ETH, la criptomoneda de de la red Ethrereum utilizada para comprar Crypto PostCards.</li>
+                          </ul>
+                            Por el momento recomendamos seguir con Chrome. Puede ser técnicamente posible utilizar otro navegador, pero no podemos garantizar un rendimiento óptimo, por lo que es posible que desee mantenerse al margen, gracias.
+                          </p>
+                    
+                          <p class="ttu mb3">
+                            ≥ ¿Cómo uso MetaMask?
+                          </p>
+                    
+                          <p class="mt0">
+                                Para poder comprar Crypto PostCards, deberá instalar el complemento <a href='https://metamask.io/'>Metamask</a> y configurar una billetera Ethereum. 
+                                Esto servirá como su billetera online, así que por favor cuide bien la contraseña y no comparta las palabras clave con nadie. Para obtener más instrucciones, consulte este <a href='https://www.youtube.com/watch?v=6Gf_kRE4MJU&feature=youtu.be'>video</a> .
+                          </p>
+
+                          <p class="ttu mb3">
+                                ≥ ¿Dónde compro Ethereum?
+                              </p>
+                        
+                              <p class="mt0">
+                                    Para comprar Crypto PostCards, deberá usar $ETH, que puede comprar utilizando fiat de varios exchanges como <a href='https://www.coinbase.com/'>Coinbase</a>. Como segundo paso, deberá transferir el $ETH comprado en el exchange a su billetera MetaMask.
+                              </p>
+
+
+                              <p class="ttu mb3">
+                                    ≥ ¿Qué son las Crypto PostCards?
+                                  </p>
+                            
+                                  <p class="mt0">
+                                
+                                        Las Crypto PostCards son "CryptoArt-CryptoColleccionables-TokensERC721", es decir Obras digitales (Memes, Arte Digital, Collages...) que mediante smart contracts son tokenizados sobre la blockchain de Ethereum. 
+                                        Cada Crypto PostCard representa una creacion digital que puedes comprar y registrar en nuestra plataforma. Al comprar la Crypto PostCard, adquirirá la propiedad de la obra, parte del precio de compra pagado se transferirá al propietario anterior y el resto 30% a una causa social mediante el "Charity Cut". 
+                                </p>
+
+                                <p class="ttu mb3">
+                                        ≥ ¿Cómo varía el precio de cada Crypto PostCard?
+                                      </p>
+                                
+                                      <p class="mt0">
+                                    
+                                            Todos los Crypto PostCards, exceptuando alguna edición especial, saldrán a un precio inicial, muy bajo de salida. El precio se mantendrá o subirá dependiendo de su popularidad. 
+                                            Una vez comprado, mediante un smart contract actualizara al siguiente salto de precio de forma automática, el propietario no tiene forma de mantenerse el token siempre que haya otra persona interesado en él, creemos que con esta variable de "tokenomics" o de incitación al juego y a mantener el token en tu propiedad genera más transacciones por lo tanto también más ganancias para la causa social.
+                                    </p>
+
+                          <p class="ttu mb3">
+                            ≥ Charity Cut 30%
+                          </p>
+                    
+                          <p class="mt0">
+                            Al comprar una Crypto PostCard, hay un recorte benéfico del 30% que sera directamente donado a una Organizació Benéfica. El Smart Contract está diseñado para que el "Charity Cut" sea tomados y enviados a las organizaciones beneficiarias una vez que la próxima persona compre tu CryptoCard</a>
+                          </p>
+                        </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+
+
+    <!-- ========= Bootsrap 4 - JavaScript ========= -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+	crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+    crossorigin="anonymous"></script>
+
+
+    <!-- ========= Local JavaScript ========= -->
+    <!--<script type="text/javascript" src="scripts/lib/index.min.js"></script>-->
+	<script type="text/javascript" src="scripts/lib/bignumber.min.js"></script>
+	<script type="text/javascript" src="scripts/lib/web3.min.js"></script>
+    <script type="text/javascript" src="scripts/lib/truffle-contract.min.js"></script>
+    
+
+
+<script type="text/javascript" src="home.bundle.js"></script></body>
+
+</html>
